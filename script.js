@@ -159,6 +159,12 @@ const works = [
     href: "https://aromaair.uz/fragrances",
     external: true,
   },
+  {
+    title: "Berry Bouquet — ягодный бутик",
+    image: "public/works/berry-bouquet.png",
+    href: "https://www.berry-bouquet.ru/collection/sublimirovannye-yagody-v-shokolade",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
