@@ -147,6 +147,12 @@ const works = [
     href: "https://wedding-cake.ru/",
     external: true,
   },
+  {
+    title: "VIVA LA VIKA — ювелирный магазин украшений",
+    image: "public/works/vivalavika.png",
+    href: "https://vivalavika.com/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
