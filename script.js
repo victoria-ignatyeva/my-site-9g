@@ -153,6 +153,12 @@ const works = [
     href: "https://vivalavika.com/",
     external: true,
   },
+  {
+    title: "Aroma Air — ароматы для бизнеса",
+    image: "public/works/aromaair.png",
+    href: "https://aromaair.uz/fragrances",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
