@@ -135,6 +135,12 @@ const works = [
     href: "https://readymath.ru/",
     external: true,
   },
+  {
+    title: "Fashion Stylist — стилист Мария Луконина",
+    image: "public/works/fashion-stylist.png",
+    href: "https://fashion-stylist.pro/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
