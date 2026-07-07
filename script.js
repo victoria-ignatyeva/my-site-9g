@@ -171,6 +171,12 @@ const works = [
     href: "https://catsocietybar.site/",
     external: true,
   },
+  {
+    title: "BOOST — онлайн-курсы подготовки к ЕГЭ и ОГЭ",
+    image: "public/works/boost-ai.png",
+    href: "https://boost-ai.ru/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
