@@ -1,7 +1,24 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="16" fill="#111111"/>
-  <circle cx="32" cy="32" r="20" fill="#FFD400"/>
-  <circle cx="25" cy="28" r="3.2" fill="#111111"/>
-  <circle cx="39" cy="28" r="3.2" fill="#111111"/>
-  <path d="M23 38c2.6 3.8 6.2 5.7 9 5.7s6.4-1.9 9-5.7" fill="none" stroke="#111111" stroke-width="3.2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="face" cx="50%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#FFE47A" />
+      <stop offset="55%" stop-color="#FFD230" />
+      <stop offset="100%" stop-color="#F5A800" />
+    </radialGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#face)" stroke="#E38F00" stroke-width="1.5" />
+  <ellipse cx="32" cy="20" rx="21" ry="13" fill="url(#gloss)" />
+
+  <ellipse cx="22" cy="26" rx="4" ry="5.5" fill="#3A2A00" />
+  <ellipse cx="42" cy="26" rx="4" ry="5.5" fill="#3A2A00" />
+  <circle cx="23.4" cy="24" r="1.4" fill="#FFFFFF" />
+  <circle cx="43.4" cy="24" r="1.4" fill="#FFFFFF" />
+
+  <path d="M16 38c3.6 8.4 11 12.5 16 12.5S44.4 46.4 48 38c-6 3.4-10.6 4.6-16 4.6S22 41.4 16 38Z" fill="#3A2A00" />
+  <path d="M20 39.5c7 1.8 17 1.8 24 0-6 2.6-10 3.4-12 3.4s-6-.8-12-3.4Z" fill="#FFFFFF" />
 </svg>
