@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victoria Ignatyeva — UX/UI Design</title>
+    <meta
+      name="description"
+      content="Изучаю UX/UI-дизайн, создаю интерфейсы в Figma и разрабатываю лендинги на Tilda."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="public/icon.svg" />
+    <link rel="apple-touch-icon" href="public/apple-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- ================= HERO ================= -->
+      <section id="about" class="hero">
+        <!-- Nav -->
+        <header class="nav">
+          <span class="logo">Victoria<span class="logo-dot">.</span>Ignatyeva</span>
+
+          <nav class="nav-links">
+            <a href="#work">Работы</a>
+            <a href="#contact">Контакты</a>
+          </nav>
+
+          <a href="#contact" class="btn btn-solid btn-sm nav-cta">
+            Связаться
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+          </a>
+        </header>
+
+        <!-- Main grid -->
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="badge">
+              <svg class="dot-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+              <span>Открыта для проектов</span>
+            </div>
+
+            <h1 class="hero-title">
+              UX / UI
+              <br />
+              <span class="hero-title-line">
+                <span class="typewriter" id="typewriter">
+                  <span class="typewriter-inner">
+                    <span class="typewriter-sizer" aria-hidden="true">Design</span>
+                    <span class="typewriter-line">
+                      <span class="typewriter-text" aria-live="polite"></span><span class="typewriter-caret" aria-hidden="true"></span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </h1>
+
+            <p class="hero-lead">
+              Изучаю UX/UI-дизайн и создаю интерфейсы в Figma. Также разрабатываю
+              лендинги на Tilda. Люблю минимализм, продуманную структуру и
+              аккуратный дизайн.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-solid btn-lg">
+                Смотреть работы
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+              </a>
+              <a href="#about" class="btn btn-outline btn-lg">Обо мне</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <p class="stat-num">6+</p>
+                <p class="stat-label">Лет опыта</p>
+              </div>
+              <div class="stat-divider"></div>
+              <div>
+                <p class="stat-num">60+</p>
+                <p class="stat-label">Продуктов выпущено</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-portrait">
+            <div class="portrait-wrap">
+              <img
+                src="public/designer-portrait.jpg"
+                alt="Victoria Ignatyeva, UX/UI дизайнер, чёрно-белый портрет"
+                width="711"
+                height="883"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee">
+          <div class="marquee-track" id="marquee-track"></div>
+        </div>
+      </section>
+
+      <!-- ================= WORKS ================= -->
+      <section id="work" class="works">
+        <div class="reveal works-head">
+          <h2 class="section-title">Мои работы</h2>
+          <p class="works-sub">
+            Избранные проекты в интерфейсах, лендингах и дизайн-системах.
+          </p>
+        </div>
+
+        <div class="works-grid" id="works-grid"></div>
+
+        <div class="pagination" id="pagination"></div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="contact" class="footer">
+        <div class="footer-inner">
+          <p class="footer-eyebrow">Контакты</p>
+          <h2 class="footer-title">Давайте создадим что-то вместе</h2>
+
+          <div class="contacts">
+            <a class="contact" href="mailto:vieriry@gmail.com" target="_top" rel="noopener noreferrer">
+              <span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">vieriry@gmail.com</span>
+              </span>
+              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </a>
+            <a class="contact" href="https://t.me/ic33333" target="_blank" rel="noopener noreferrer">
+              <span>
+                <span class="contact-label">Telegram</span>
+                <span class="contact-value">@ic33333</span>
+              </span>
+              <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> Victoria Ignatyeva</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
