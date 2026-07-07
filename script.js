@@ -165,6 +165,12 @@ const works = [
     href: "https://www.berry-bouquet.ru/collection/sublimirovannye-yagody-v-shokolade",
     external: true,
   },
+  {
+    title: "Cat Society — котокафе в Ставрополе",
+    image: "public/works/catsocietybar.png",
+    href: "https://catsocietybar.site/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
