@@ -141,6 +141,12 @@ const works = [
     href: "https://fashion-stylist.pro/",
     external: true,
   },
+  {
+    title: "Wedding Cake — кондитерская Анны Ульяновой",
+    image: "public/works/wedding-cake.png",
+    href: "https://wedding-cake.ru/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
