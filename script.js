@@ -135,6 +135,48 @@ const works = [
     href: "https://readymath.ru/",
     external: true,
   },
+  {
+    title: "Fashion Stylist — стилист Мария Луконина",
+    image: "public/works/fashion-stylist.png",
+    href: "https://fashion-stylist.pro/",
+    external: true,
+  },
+  {
+    title: "Wedding Cake — кондитерская Анны Ульяновой",
+    image: "public/works/wedding-cake.png",
+    href: "https://wedding-cake.ru/",
+    external: true,
+  },
+  {
+    title: "VIVA LA VIKA — ювелирный магазин украшений",
+    image: "public/works/vivalavika.png",
+    href: "https://vivalavika.com/",
+    external: true,
+  },
+  {
+    title: "Aroma Air — ароматы для бизнеса",
+    image: "public/works/aromaair.png",
+    href: "https://aromaair.uz/fragrances",
+    external: true,
+  },
+  {
+    title: "Berry Bouquet — ягодный бутик",
+    image: "public/works/berry-bouquet.png",
+    href: "https://www.berry-bouquet.ru/collection/sublimirovannye-yagody-v-shokolade",
+    external: true,
+  },
+  {
+    title: "Cat Society — котокафе в Ставрополе",
+    image: "public/works/catsocietybar.png",
+    href: "https://catsocietybar.site/",
+    external: true,
+  },
+  {
+    title: "BOOST — онлайн-курсы подготовки к ЕГЭ и ОГЭ",
+    image: "public/works/boost-ai.png",
+    href: "https://boost-ai.ru/",
+    external: true,
+  },
   ...titles.map((title, i) => ({
     title,
     image: images[i % images.length],
@@ -143,12 +185,9 @@ const works = [
   })),
 ];
 
-const PER_PAGE = 6;
-const totalPages = Math.ceil(works.length / PER_PAGE);
-let page = 0;
+const MAX_WORKS = 10;
 
 const grid = document.getElementById("works-grid");
-const pagination = document.getElementById("pagination");
 
 /* ---------- Reveal on scroll ---------- */
 let revealObserver = null;
@@ -180,8 +219,7 @@ document.querySelectorAll(".reveal").forEach((el) => observeReveal(el, 0));
 
 /* ---------- Render works ---------- */
 function renderWorks() {
-  const start = page * PER_PAGE;
-  const visible = works.slice(start, start + PER_PAGE);
+  const visible = works.slice(0, MAX_WORKS);
 
   grid.innerHTML = visible
     .map((work, i) => {
@@ -189,7 +227,7 @@ function renderWorks() {
         ? ` target="_blank" rel="noopener noreferrer"`
         : "";
       return `
-      <div class="reveal" data-delay="${(i % 3) * 100}">
+      <div class="reveal" data-delay="${(i % 2) * 100}">
         <a class="work-card" href="${work.href}"${attrs}>
           <div class="work-thumb">
             <img src="${work.image}" alt="${work.title}" loading="lazy" />
@@ -205,46 +243,6 @@ function renderWorks() {
   grid.querySelectorAll(".reveal").forEach((el) => {
     observeReveal(el, Number(el.dataset.delay));
   });
-
-  renderPagination();
 }
-
-/* ---------- Render pagination ---------- */
-function renderPagination() {
-  let html = "";
-
-  html += `<button type="button" class="page-btn page-arrow" data-action="prev" aria-label="Предыдущая страница"${
-    page === 0 ? " disabled" : ""
-  }><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>`;
-
-  for (let i = 0; i < totalPages; i++) {
-    html += `<button type="button" class="page-btn${
-      i === page ? " active" : ""
-    }" data-page="${i}" aria-label="Страница ${i + 1}"${
-      i === page ? ' aria-current="true"' : ""
-    }>${i + 1}</button>`;
-  }
-
-  html += `<button type="button" class="page-btn page-arrow" data-action="next" aria-label="Следующая страница"${
-    page === totalPages - 1 ? " disabled" : ""
-  }><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>`;
-
-  pagination.innerHTML = html;
-}
-
-/* ---------- Pagination events ---------- */
-pagination.addEventListener("click", (e) => {
-  const btn = e.target.closest("button");
-  if (!btn) return;
-
-  if (btn.dataset.action === "prev") {
-    page = Math.max(0, page - 1);
-  } else if (btn.dataset.action === "next") {
-    page = Math.min(totalPages - 1, page + 1);
-  } else if (btn.dataset.page !== undefined) {
-    page = Number(btn.dataset.page);
-  }
-  renderWorks();
-});
 
 renderWorks();
